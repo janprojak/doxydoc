@@ -29,26 +29,26 @@ After installing _doxygen_ and _graphviz_ on Windows it is required to add them 
 
 # usage
 
-To run tbe script it is required to indicate the path to a source code for which the Doxygen documentation shall be generated. Indicate the source path after the `--source` flag:
+To run tbe script it is required to indicate the path to a source code for which the Doxygen documentation shall be generated. Indicate the source path with the `--source` flag:
 ```
 python3 doxydoc.py --source /path/to/source/
 ```
 
-By default, the destination folder is set to the current working directory of the script file. If you need to change it, provide the desired destination path after the `--destination` flag:
+By default, the destination folder is set to the current working directory of the script file, e.g. /path/to/destination/=cwd. If you need to change it, provide the desired destination path with the `--destination` flag:
 ```
 python3 doxydoc.py --source /path/to/source/ --destination /path/to/destination/
 ```
 
-Sometimes it is required to skip some folders (e.g. build folders) in the source path. For that specify these folders relatively (!) to the source path after the `--exclude` flag:
+Sometimes it is required to skip some folders (e.g. build folders) in the source path. For that specify these folders relatively (!) to the source path with the `--exclude` flag:
 ```
 python3 doxydoc.py --source /path/to/source/ --exclude folder1 folderN
 ```
-By _relatively_ means, that _folder1_ ... _folderN_ are being placed inside _/path/to/source/_.
+By _relatively_ means, that _folder1_ ... _folderN_ are being placed inside _/path/to/source/_, so no use in full path indication for them.
 
 # hacks
 Most projects are big and the process of opening the result folder via file manager may take a while. It is recommended to open the resulting _index.html_ file via command line:
 ```
-cd /path/to/where/store/result/html/
+cd /path/to/destination/project_name/html/
 firefox index.html
 ```
 
